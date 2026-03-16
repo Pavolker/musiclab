@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicLab-IA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <h1>MusicLab-IA</h1>
+          <p class="hero-subtitle">A Música que Nasce nos Teclados da Emoção</p>
+          <div class="hero-summary">
+            <p>
+              O MusicLab-IA reúne mais de duas décadas de experimentação com teclado
+              digital, Akai EWI USB, Korg Kaossilator, DAWs como Adobe Audition e
+              Logic Pro, e agora a integração entre melodias autorais e letras por
+              meio do Suno.
+            </p>
+            <button class="pill-button" id="about-toggle" type="button" aria-expanded="false" aria-controls="about-panel">
+              Saber mais
+            </button>
+          </div>
+          <div class="hero-stats" id="hero-stats">
+            <span>62 faixas</span>
+            <span>Catálogo local</span>
+            <span>M4A otimizado</span>
+          </div>
+        </div>
+
+        <section class="spotlight" id="spotlight">
+          <div class="spotlight-art" id="spotlight-art">
+            <span class="spotlight-kicker">Em destaque</span>
+            <strong id="spotlight-title">Carregando...</strong>
+            <small id="spotlight-file">web-audio</small>
+          </div>
+
+          <div class="spotlight-meta">
+            <button class="pill-button" id="play-spotlight" type="button">
+              Tocar agora
+            </button>
+            <p id="spotlight-description">
+              O catálogo será carregado a partir do relatório de conversão.
+            </p>
+          </div>
+        </section>
+      </header>
+
+      <section class="about-panel" id="about-panel" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Manifesto</p>
+            <h2>Como esse universo musical foi construído</h2>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            O MusicLab-IA nasce de uma prática que venho desenvolvendo há muitos anos.
+            Se entendermos um teclado digital como uma ferramenta inteligente, isso se
+            justifica porque ele já incorpora camadas de decisão musical: timbres,
+            bancos sonoros, dinâmicas, recursos de acompanhamento, sensibilidade ao
+            toque, variações harmônicas, arpejos, efeitos e respostas que ampliam a
+            ação do músico para além da execução puramente mecânica. Não se trata de
+            uma inteligência autônoma, mas de uma inteligência embutida no
+            instrumento, uma engenharia musical que dialoga com a invenção humana. É
+            nessa estrada que estou há cerca de 25 anos.
+          </p>
+
+          <p>
+            Do teclado cheguei ao <strong>Akai EWI USB</strong>, um controlador de sopro
+            eletrônico que traduz pressão de ar, articulação e expressão em dados
+            musicais. Na prática, ele tornou possível trabalhar a lógica do sopro com
+            uma enorme variedade de timbres e presets, abrindo espaço para linhas
+            melódicas mais orgânicas, ambiências e frases com outro tipo de
+            sensibilidade. A combinação entre teclado e EWI ampliou muito meu campo de
+            experimentação.
+          </p>
+
+          <p>
+            A esse conjunto se somou o <strong>Korg Kaossilator</strong>, sintetizador de
+            toque livre com superfície tátil, escalas configuráveis, loops,
+            modulações, efeitos e grande agilidade para testar ideias sem a rigidez do
+            teclado tradicional. Ele completou o trio de ferramentas que defini como
+            essenciais para acompanhar minha curiosidade musical: um eixo harmônico,
+            um eixo melódico-expressivo e um eixo de experimentação direta.
+          </p>
+
+          <p>
+            O material produzido por esses instrumentos era recebido e trabalhado no
+            <strong>Adobe Audition</strong>, estação profissional de edição, limpeza,
+            montagem e tratamento de áudio, ou no <strong>Logic Pro</strong>, ambiente de
+            criação musical do Mac voltado para arranjo, gravação, camadas,
+            automações, mixagem e acabamento. Toda a produção apresentada neste site
+            nasce dessa arquitetura: instrumentos físicos, captação digital,
+            manipulação em DAW e escuta crítica continuada.
+          </p>
+
+          <p>
+            A grande novidade veio com o <strong>Suno</strong>: a possibilidade de unir,
+            de modo produtivo, as faixas melódicas que eu já vinha criando com o meu
+            acervo de letras. E aqui existe um capítulo à parte. Desde os 15 anos,
+            acumulo escritos, poemas, fragmentos, frases, textos e pedaços de
+            pensamento. O que o Suno trouxe foi justamente a condição de trabalhar
+            musicalmente esse material verbal, algo que, pela minha formação musical
+            limitada no campo da composição vocal tradicional, dificilmente aconteceria
+            sem uma inteligência musical assistida por IA.
+          </p>
+
+          <p>
+            Foi assim que, em 2024, com o lançamento do Suno, comecei uma nova fase de
+            experimentação: integrar, ajuntar, compor e mesclar melodias já produzidas
+            com letras guardadas ao longo de décadas. Este site dá a medida desse
+            resultado. Ele não é apenas um repositório de faixas, mas o retrato de um
+            processo continuado de pesquisa, escuta, composição e reinvenção.
+          </p>
+
+          <p>
+            Há ainda uma ligação profunda entre este trabalho e o livro
+            <a href="https://sites.google.com/mdh-hability.com/filosofiadamusica/in%C3%ADcio" target="_blank" rel="noreferrer">Filosofia da Música</a>,
+            assim como o aplicativo decorrente dele,
+            <a href="https://filosofia-musica.netlify.app/" target="_blank" rel="noreferrer">Filosofia da Música App</a>.
+            O livro apresenta o esforço filosófico que faço para entender,
+            experimentar e conviver com o significado da música. Trata-se de uma
+            abordagem metafísica da música e, ao mesmo tempo, do reconhecimento de sua
+            importância vital em minha vida.
+          </p>
+
+          <p>
+            Ao lado do livro sobre
+            <a href="https://sites.google.com/mdh-hability.com/chopin/in%C3%ADcio" target="_blank" rel="noreferrer">Chopin</a>
+            e do próximo trabalho sobre <strong>A Flauta Mágica</strong>, de Mozart, esse
+            percurso explicita meu modo de abordar a música: ouvindo muito,
+            pesquisando muito, lendo muito, estudando muito e, sobretudo,
+            experimentando. Tentando, errando, aprendendo e fazendo da música uma
+            dimensão inseparável da minha vida.
+          </p>
+
+          <p class="about-signature">Paulo Volker - Brasília - 2026</p>
+        </div>
+      </section>
+
+      <main class="content-stack">
+        <aside class="queue-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Agora tocando</p>
+              <h2 id="current-title">Escolha uma faixa</h2>
+            </div>
+          </div>
+
+          <div class="now-playing-grid">
+            <div class="current-card" id="current-card">
+              <div class="current-art" id="current-art">
+                <span id="current-index">--</span>
+              </div>
+              <div class="current-info">
+                <p id="current-file">Nenhuma faixa carregada</p>
+                <p id="current-duration">00:00</p>
+              </div>
+            </div>
+
+            <div class="player-main">
+              <div class="visualizer" aria-hidden="true">
+                <canvas id="visualizer-canvas" width="640" height="180"></canvas>
+              </div>
+
+              <div class="controls">
+                <button class="control-button" id="prev-button" type="button">
+                  Anterior
+                </button>
+                <button class="control-button control-button-primary" id="play-button" type="button">
+                  Tocar
+                </button>
+                <button class="control-button" id="next-button" type="button">
+                  Proxima
+                </button>
+              </div>
+
+              <div class="timeline">
+                <span id="time-current">00:00</span>
+                <input id="seek-range" type="range" min="0" max="1000" value="0" />
+                <span id="time-total">00:00</span>
+              </div>
+
+              <div class="volume-row">
+                <label for="volume-range">Volume</label>
+                <input
+                  id="volume-range"
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="0.85"
+                />
+              </div>
+            </div>
+
+            <div class="queue-list" id="queue-list"></div>
+          </div>
+        </aside>
+
+        <section class="library-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Biblioteca</p>
+              <h2>Todas as faixas</h2>
+            </div>
+            <label class="search-field">
+              <span class="sr-only">Buscar faixas</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Buscar por titulo"
+                autocomplete="off"
+              />
+            </label>
+          </div>
+
+          <div class="library-meta">
+            <button class="filter-chip is-active" data-filter="all" type="button">
+              Tudo
+            </button>
+            <button class="filter-chip" data-filter="long" type="button">
+              Longas
+            </button>
+            <button class="filter-chip" data-filter="short" type="button">
+              Curtas
+            </button>
+            <button class="filter-chip" data-filter="recent" type="button">
+              Recente
+            </button>
+          </div>
+
+          <div class="track-grid" id="track-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <audio id="audio-player" preload="metadata"></audio>
+    <script id="catalog-data" type="application/json">
+      {
+        "createdAt": "2026-03-16T14:20:27Z",
+        "outputDirectory": "web-audio",
+        "totalTracks": 62,
+        "tracks": [
+          { "output": "alma-dele.m4a", "source": "ALMA DELE.mp3", "title": "ALMA DELE" },
+          { "output": "aquela-sonata.m4a", "source": "AQUELA SONATA .aif", "title": "AQUELA SONATA" },
+          { "output": "as-20.m4a", "source": "AS 20.wav", "title": "AS 20" },
+          { "output": "alegria.m4a", "source": "Alegria.aif", "title": "Alegria" },
+          { "output": "as-vinhas.m4a", "source": "As Vinhas.mp3", "title": "As Vinhas" },
+          { "output": "assim.m4a", "source": "Assim.aif", "title": "Assim" },
+          { "output": "baru.m4a", "source": "BARU.aif", "title": "BARU" },
+          { "output": "bastidas.m4a", "source": "Bastidas.aif", "title": "Bastidas" },
+          { "output": "bossa-velha.m4a", "source": "Bossa Velha.mp3", "title": "Bossa Velha" },
+          { "output": "cara-da-onda.m4a", "source": "CARA DA ONDA.aif", "title": "CARA DA ONDA" },
+          { "output": "cavalgadas.m4a", "source": "CAVALGADAS.aif", "title": "CAVALGADAS" },
+          { "output": "chegada.m4a", "source": "CHEGADA.aif", "title": "CHEGADA" },
+          { "output": "confucio.m4a", "source": "CONFUCIO.mp3", "title": "CONFUCIO" },
+          { "output": "corneta.m4a", "source": "CORNETA.wav", "title": "CORNETA" },
+          { "output": "cornetas.m4a", "source": "CORNETAS.aif", "title": "CORNETAS" },
+          { "output": "curva-da-luz.m4a", "source": "CURVA DA LUZ.aiff", "title": "CURVA DA LUZ" },
+          { "output": "carma.m4a", "source": "Carma.mp3", "title": "Carma" },
+          { "output": "desontem.m4a", "source": "DESONTEM.aif", "title": "DESONTEM" },
+          { "output": "despiste.m4a", "source": "DESPISTE.mp3", "title": "DESPISTE" },
+          { "output": "diadorim.m4a", "source": "Diadorim.mp3", "title": "Diadorim" },
+          { "output": "doces-folias.m4a", "source": "Doces Folias.aif", "title": "Doces Folias" },
+          { "output": "dor-avante.m4a", "source": "Dor Avante.mp3", "title": "Dor Avante" },
+          { "output": "drama.m4a", "source": "Drama.aif", "title": "Drama" },
+          { "output": "encanto.m4a", "source": "ENCANTO.aif", "title": "ENCANTO" },
+          { "output": "eu-quero.m4a", "source": "EU QUERO.mp3", "title": "EU QUERO" },
+          { "output": "eu-sou-12.m4a", "source": "EU SOU 12.wav", "title": "EU SOU 12" },
+          { "output": "escuta.m4a", "source": "Escuta.wav", "title": "Escuta" },
+          { "output": "eu-sou.m4a", "source": "Eu Sou.wav", "title": "Eu Sou" },
+          { "output": "fadas.m4a", "source": "Fadas.wav", "title": "Fadas" },
+          { "output": "fundo-2.m4a", "source": "Fundo-2.mp3", "title": "Fundo-2" },
+          { "output": "gravidade.m4a", "source": "GRAVIDADE.aif", "title": "GRAVIDADE" },
+          { "output": "grito.m4a", "source": "GRITO.aif", "title": "GRITO" },
+          { "output": "jazz-bossa-3.m4a", "source": "JAZZ BOSSA 3.aif", "title": "JAZZ BOSSA 3" },
+          { "output": "jazza.m4a", "source": "JAZZA.aif", "title": "JAZZA" },
+          { "output": "jazzas.m4a", "source": "Jazzas.wav", "title": "Jazzas" },
+          { "output": "la-longe.m4a", "source": "LA LONGE.aif", "title": "LA LONGE" },
+          { "output": "longe-bem-longe.m4a", "source": "Longe, bem longe.wav", "title": "Longe, bem longe" },
+          { "output": "mantra-presente.m4a", "source": "MANTRA PRESENTE.aif", "title": "MANTRA PRESENTE" },
+          { "output": "mariposas.m4a", "source": "Mariposas.wav", "title": "Mariposas" },
+          { "output": "nada.m4a", "source": "NADA.aif", "title": "NADA" },
+          { "output": "nadas.m4a", "source": "Nadas.wav", "title": "Nadas" },
+          { "output": "olho-que-ve.m4a", "source": "OLHO QUE VE.mp3", "title": "OLHO QUE VE" },
+          { "output": "ontem.m4a", "source": "ONTEM.mp3", "title": "ONTEM" },
+          { "output": "outro-olhar.m4a", "source": "OUTRO OLHAR.aif", "title": "OUTRO OLHAR" },
+          { "output": "ofendido.m4a", "source": "Ofendido.aif", "title": "Ofendido" },
+          { "output": "pacto.m4a", "source": "Pacto.mp3", "title": "Pacto" },
+          { "output": "raio-azul.m4a", "source": "RAIO AZUL.aif", "title": "RAIO AZUL" },
+          { "output": "reggaer-possivel.m4a", "source": "REGGAER POSSIVEL.aif", "title": "REGGAER POSSIVEL" },
+          { "output": "se-fosse.m4a", "source": "SE FOSSE.aif", "title": "SE FOSSE" },
+          { "output": "se-fosse-amor.m4a", "source": "SE FOSSE AMOR.aiff", "title": "SE FOSSE AMOR" },
+          { "output": "seu-dissabor.m4a", "source": "SEU DISSABOR.mp3", "title": "SEU DISSABOR" },
+          { "output": "segredo.m4a", "source": "Segredo.wav", "title": "Segredo" },
+          { "output": "sem-futuro.m4a", "source": "Sem futuro.wav", "title": "Sem futuro" },
+          { "output": "tem-noite.m4a", "source": "TEM NOITE.mp3", "title": "TEM NOITE" },
+          { "output": "tudo.m4a", "source": "TUDO.wav", "title": "TUDO" },
+          { "output": "tiro.m4a", "source": "Tiro.aif", "title": "Tiro" },
+          { "output": "um-jazz.m4a", "source": "Um jazz.wav", "title": "Um jazz" },
+          { "output": "vida-mortalha.m4a", "source": "VIDA MORTALHA.aiff", "title": "VIDA MORTALHA" },
+          { "output": "vem.m4a", "source": "Vem.mp3", "title": "Vem" },
+          { "output": "veredito.m4a", "source": "Veredito.wav", "title": "Veredito" },
+          { "output": "sonata-29-06-2024-16-15.m4a", "source": "sonata - 29:06:2024, 16.15.wav", "title": "sonata - 29:06:2024, 16.15" },
+          { "output": "sonata-1-2.m4a", "source": "sonata 1-2.wav", "title": "sonata 1-2" }
+        ]
+      }
+    </script>
+    <script src="config.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

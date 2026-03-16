@@ -1,0 +1,11 @@
+*.mp3
+*.wav
+*.aif
+*.aiff
+
+web-audio/
+web-audio-test/
+
+.env
+.env.*
+!.env.example

@@ -1,0 +1,317 @@
+{
+  "createdAt" : "2026-03-16T14:20:27Z",
+  "outputDirectory" : "web-audio",
+  "totalTracks" : 62,
+  "tracks" : [
+    {
+      "output" : "alma-dele.m4a",
+      "source" : "ALMA DELE.mp3",
+      "title" : "ALMA DELE"
+    },
+    {
+      "output" : "aquela-sonata.m4a",
+      "source" : "AQUELA SONATA .aif",
+      "title" : "AQUELA SONATA"
+    },
+    {
+      "output" : "as-20.m4a",
+      "source" : "AS 20.wav",
+      "title" : "AS 20"
+    },
+    {
+      "output" : "alegria.m4a",
+      "source" : "Alegria.aif",
+      "title" : "Alegria"
+    },
+    {
+      "output" : "as-vinhas.m4a",
+      "source" : "As Vinhas.mp3",
+      "title" : "As Vinhas"
+    },
+    {
+      "output" : "assim.m4a",
+      "source" : "Assim.aif",
+      "title" : "Assim"
+    },
+    {
+      "output" : "baru.m4a",
+      "source" : "BARU.aif",
+      "title" : "BARU"
+    },
+    {
+      "output" : "bastidas.m4a",
+      "source" : "Bastidas.aif",
+      "title" : "Bastidas"
+    },
+    {
+      "output" : "bossa-velha.m4a",
+      "source" : "Bossa Velha.mp3",
+      "title" : "Bossa Velha"
+    },
+    {
+      "output" : "cara-da-onda.m4a",
+      "source" : "CARA DA ONDA.aif",
+      "title" : "CARA DA ONDA"
+    },
+    {
+      "output" : "cavalgadas.m4a",
+      "source" : "CAVALGADAS.aif",
+      "title" : "CAVALGADAS"
+    },
+    {
+      "output" : "chegada.m4a",
+      "source" : "CHEGADA.aif",
+      "title" : "CHEGADA"
+    },
+    {
+      "output" : "confucio.m4a",
+      "source" : "CONFUCIO.mp3",
+      "title" : "CONFUCIO"
+    },
+    {
+      "output" : "corneta.m4a",
+      "source" : "CORNETA.wav",
+      "title" : "CORNETA"
+    },
+    {
+      "output" : "cornetas.m4a",
+      "source" : "CORNETAS.aif",
+      "title" : "CORNETAS"
+    },
+    {
+      "output" : "curva-da-luz.m4a",
+      "source" : "CURVA DA LUZ.aiff",
+      "title" : "CURVA DA LUZ"
+    },
+    {
+      "output" : "carma.m4a",
+      "source" : "Carma.mp3",
+      "title" : "Carma"
+    },
+    {
+      "output" : "desontem.m4a",
+      "source" : "DESONTEM.aif",
+      "title" : "DESONTEM"
+    },
+    {
+      "output" : "despiste.m4a",
+      "source" : "DESPISTE.mp3",
+      "title" : "DESPISTE"
+    },
+    {
+      "output" : "diadorim.m4a",
+      "source" : "Diadorim.mp3",
+      "title" : "Diadorim"
+    },
+    {
+      "output" : "doces-folias.m4a",
+      "source" : "Doces Folias.aif",
+      "title" : "Doces Folias"
+    },
+    {
+      "output" : "dor-avante.m4a",
+      "source" : "Dor Avante.mp3",
+      "title" : "Dor Avante"
+    },
+    {
+      "output" : "drama.m4a",
+      "source" : "Drama.aif",
+      "title" : "Drama"
+    },
+    {
+      "output" : "encanto.m4a",
+      "source" : "ENCANTO.aif",
+      "title" : "ENCANTO"
+    },
+    {
+      "output" : "eu-quero.m4a",
+      "source" : "EU QUERO.mp3",
+      "title" : "EU QUERO"
+    },
+    {
+      "output" : "eu-sou-12.m4a",
+      "source" : "EU SOU 12.wav",
+      "title" : "EU SOU 12"
+    },
+    {
+      "output" : "escuta.m4a",
+      "source" : "Escuta.wav",
+      "title" : "Escuta"
+    },
+    {
+      "output" : "eu-sou.m4a",
+      "source" : "Eu Sou.wav",
+      "title" : "Eu Sou"
+    },
+    {
+      "output" : "fadas.m4a",
+      "source" : "Fadas.wav",
+      "title" : "Fadas"
+    },
+    {
+      "output" : "fundo-2.m4a",
+      "source" : "Fundo-2.mp3",
+      "title" : "Fundo-2"
+    },
+    {
+      "output" : "gravidade.m4a",
+      "source" : "GRAVIDADE.aif",
+      "title" : "GRAVIDADE"
+    },
+    {
+      "output" : "grito.m4a",
+      "source" : "GRITO.aif",
+      "title" : "GRITO"
+    },
+    {
+      "output" : "jazz-bossa-3.m4a",
+      "source" : "JAZZ BOSSA 3.aif",
+      "title" : "JAZZ BOSSA 3"
+    },
+    {
+      "output" : "jazza.m4a",
+      "source" : "JAZZA.aif",
+      "title" : "JAZZA"
+    },
+    {
+      "output" : "jazzas.m4a",
+      "source" : "Jazzas.wav",
+      "title" : "Jazzas"
+    },
+    {
+      "output" : "la-longe.m4a",
+      "source" : "LA LONGE.aif",
+      "title" : "LA LONGE"
+    },
+    {
+      "output" : "longe-bem-longe.m4a",
+      "source" : "Longe, bem longe.wav",
+      "title" : "Longe, bem longe"
+    },
+    {
+      "output" : "mantra-presente.m4a",
+      "source" : "MANTRA PRESENTE.aif",
+      "title" : "MANTRA PRESENTE"
+    },
+    {
+      "output" : "mariposas.m4a",
+      "source" : "Mariposas.wav",
+      "title" : "Mariposas"
+    },
+    {
+      "output" : "nada.m4a",
+      "source" : "NADA.aif",
+      "title" : "NADA"
+    },
+    {
+      "output" : "nadas.m4a",
+      "source" : "Nadas.wav",
+      "title" : "Nadas"
+    },
+    {
+      "output" : "olho-que-ve.m4a",
+      "source" : "OLHO QUE VE.mp3",
+      "title" : "OLHO QUE VE"
+    },
+    {
+      "output" : "ontem.m4a",
+      "source" : "ONTEM.mp3",
+      "title" : "ONTEM"
+    },
+    {
+      "output" : "outro-olhar.m4a",
+      "source" : "OUTRO OLHAR.aif",
+      "title" : "OUTRO OLHAR"
+    },
+    {
+      "output" : "ofendido.m4a",
+      "source" : "Ofendido.aif",
+      "title" : "Ofendido"
+    },
+    {
+      "output" : "pacto.m4a",
+      "source" : "Pacto.mp3",
+      "title" : "Pacto"
+    },
+    {
+      "output" : "raio-azul.m4a",
+      "source" : "RAIO AZUL.aif",
+      "title" : "RAIO AZUL"
+    },
+    {
+      "output" : "reggaer-possivel.m4a",
+      "source" : "REGGAER POSSIVEL.aif",
+      "title" : "REGGAER POSSIVEL"
+    },
+    {
+      "output" : "se-fosse.m4a",
+      "source" : "SE FOSSE.aif",
+      "title" : "SE FOSSE"
+    },
+    {
+      "output" : "se-fosse-amor.m4a",
+      "source" : "SE FOSSE AMOR.aiff",
+      "title" : "SE FOSSE AMOR"
+    },
+    {
+      "output" : "seu-dissabor.m4a",
+      "source" : "SEU DISSABOR.mp3",
+      "title" : "SEU DISSABOR"
+    },
+    {
+      "output" : "segredo.m4a",
+      "source" : "Segredo.wav",
+      "title" : "Segredo"
+    },
+    {
+      "output" : "sem-futuro.m4a",
+      "source" : "Sem futuro.wav",
+      "title" : "Sem futuro"
+    },
+    {
+      "output" : "tem-noite.m4a",
+      "source" : "TEM NOITE.mp3",
+      "title" : "TEM NOITE"
+    },
+    {
+      "output" : "tudo.m4a",
+      "source" : "TUDO.wav",
+      "title" : "TUDO"
+    },
+    {
+      "output" : "tiro.m4a",
+      "source" : "Tiro.aif",
+      "title" : "Tiro"
+    },
+    {
+      "output" : "um-jazz.m4a",
+      "source" : "Um jazz.wav",
+      "title" : "Um jazz"
+    },
+    {
+      "output" : "vida-mortalha.m4a",
+      "source" : "VIDA MORTALHA.aiff",
+      "title" : "VIDA MORTALHA"
+    },
+    {
+      "output" : "vem.m4a",
+      "source" : "Vem.mp3",
+      "title" : "Vem"
+    },
+    {
+      "output" : "veredito.m4a",
+      "source" : "Veredito.wav",
+      "title" : "Veredito"
+    },
+    {
+      "output" : "sonata-29-06-2024-16-15.m4a",
+      "source" : "sonata - 29:06:2024, 16.15.wav",
+      "title" : "sonata - 29:06:2024, 16.15"
+    },
+    {
+      "output" : "sonata-1-2.m4a",
+      "source" : "sonata 1-2.wav",
+      "title" : "sonata 1-2"
+    }
+  ]
+}
