@@ -45,6 +45,7 @@ let audioGraphReady = false;
 
 const appConfig = window.MUSICLAB_CONFIG || {};
 const audioBaseUrl = String(appConfig.audioBaseUrl || "web-audio").replace(/\/$/, "");
+const visualizerEnabled = false;
 
 const STORAGE_KEYS = {
   track: "musica-lab-ia-track",
@@ -259,7 +260,9 @@ async function playCurrent() {
 
   try {
     await audio.play();
-    await ensureAudioGraph();
+    if (visualizerEnabled) {
+      await ensureAudioGraph();
+    }
     state.isPlaying = true;
     playButton.textContent = "Pausar";
     drawVisualizer();
@@ -275,6 +278,10 @@ function pauseCurrent() {
 }
 
 async function ensureAudioGraph() {
+  if (!visualizerEnabled) {
+    return;
+  }
+
   if (audioGraphReady) {
     if (audioContext?.state === "suspended") {
       try {
@@ -314,7 +321,7 @@ async function ensureAudioGraph() {
 function drawVisualizer() {
   cancelAnimationFrame(animationFrameId);
 
-  if (!analyser || !state.isPlaying) {
+  if (!visualizerEnabled || !analyser || !state.isPlaying) {
     paintIdleVisualizer();
     return;
   }
@@ -487,6 +494,11 @@ function bindEvents() {
     state.isPlaying = false;
     playButton.textContent = "Tocar";
     paintIdleVisualizer();
+  });
+
+  audio.addEventListener("error", () => {
+    console.error("Erro ao carregar audio", audio.currentSrc, audio.error);
+    renderFatalError("Falha ao carregar a faixa de audio.");
   });
 
   audio.addEventListener("ended", () => {
