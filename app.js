@@ -47,6 +47,8 @@ const appConfig = window.MUSICLAB_CONFIG || {};
 const audioBaseUrl = String(appConfig.audioBaseUrl || "web-audio").replace(/\/$/, "");
 const visualizerEnabled = false;
 
+console.log("[MusicLab] Config carregada:", { audioBaseUrl, hasConfig: !!window.MUSICLAB_CONFIG });
+
 const STORAGE_KEYS = {
   track: "musica-lab-ia-track",
   volume: "musica-lab-ia-volume",
@@ -235,6 +237,7 @@ function loadTrack(index, { autoplay = false, preserveTime = false } = {}) {
   }
 
   state.currentIndex = index;
+  console.log("[MusicLab] Carregando track:", { title: track.title, src: track.src });
   audio.src = track.src;
   audio.load();
   seekRange.value = 0;
@@ -497,8 +500,16 @@ function bindEvents() {
   });
 
   audio.addEventListener("error", () => {
-    console.error("Erro ao carregar audio", audio.currentSrc, audio.error);
-    renderFatalError("Falha ao carregar a faixa de audio.");
+    const errorCode = audio.error ? audio.error.code : "unknown";
+    const errorMessage = audio.error ? audio.error.message : "unknown";
+    console.error("Erro ao carregar audio:", {
+      src: audio.currentSrc,
+      code: errorCode,
+      message: errorMessage,
+      networkState: audio.networkState,
+      readyState: audio.readyState
+    });
+    renderFatalError(`Falha ao carregar a faixa de audio (codigo: ${errorCode}).`);
   });
 
   audio.addEventListener("ended", () => {
