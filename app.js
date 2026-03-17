@@ -59,6 +59,13 @@ function hashString(value) {
   return [...value].reduce((acc, char) => acc + char.charCodeAt(0), 0);
 }
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 function buildPalette(seedText) {
   const hue = hashString(seedText) % 360;
   const altHue = (hue + 46) % 360;
@@ -594,7 +601,9 @@ async function loadCatalog() {
     report = await response.json();
   }
 
-  state.tracks = report.tracks.map((item, index, items) => buildTrackFromReport(item, index, items.length));
+  const tracks = report.tracks;
+  shuffleArray(tracks);
+  state.tracks = tracks.map((item, index, items) => buildTrackFromReport(item, index, items.length));
   renderHeroStats();
   applyFilter();
   renderQueue();
