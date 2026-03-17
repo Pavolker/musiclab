@@ -244,9 +244,16 @@ function loadTrack(index, { autoplay = false, preserveTime = false } = {}) {
   audio.innerHTML = '';
   const source = document.createElement('source');
   source.src = track.src;
-  source.type = 'audio/mp4';
+  source.type = 'audio/aac';
   audio.appendChild(source);
   audio.load();
+  
+  // Log para debug do source element
+  console.log("[MusicLab] Source element criado:", {
+    src: source.src,
+    type: source.type,
+    audioSrc: audio.currentSrc
+  });
   seekRange.value = 0;
   timeCurrent.textContent = "00:00";
   timeTotal.textContent = formatTime(track.duration);
@@ -517,6 +524,24 @@ function bindEvents() {
     state.isPlaying = true;
     playButton.textContent = "Pausar";
     drawVisualizer();
+    console.log("[MusicLab] Evento play:", {
+      volume: audio.volume,
+      muted: audio.muted,
+      currentTime: audio.currentTime,
+      duration: audio.duration,
+      paused: audio.paused,
+      ended: audio.ended,
+      readyState: audio.readyState,
+      networkState: audio.networkState
+    });
+  });
+
+  audio.addEventListener("canplay", () => {
+    console.log("[MusicLab] Evento canplay - audio pronto para tocar");
+  });
+
+  audio.addEventListener("playing", () => {
+    console.log("[MusicLab] Evento playing - audio realmente tocando");
   });
 
   audio.addEventListener("pause", () => {
