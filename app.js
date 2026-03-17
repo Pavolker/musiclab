@@ -15,7 +15,6 @@ const searchInput = document.getElementById("search-input");
 const playButton = document.getElementById("play-button");
 const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
-const playSpotlightButton = document.getElementById("play-spotlight");
 const seekRange = document.getElementById("seek-range");
 const volumeRange = document.getElementById("volume-range");
 const currentTitle = document.getElementById("current-title");
@@ -25,11 +24,6 @@ const currentIndex = document.getElementById("current-index");
 const timeCurrent = document.getElementById("time-current");
 const timeTotal = document.getElementById("time-total");
 const currentArt = document.getElementById("current-art");
-const spotlight = document.getElementById("spotlight");
-const spotlightArt = document.getElementById("spotlight-art");
-const spotlightTitle = document.getElementById("spotlight-title");
-const spotlightFile = document.getElementById("spotlight-file");
-const spotlightDescription = document.getElementById("spotlight-description");
 const heroStats = document.getElementById("hero-stats");
 const canvas = document.getElementById("visualizer-canvas");
 const canvasContext = canvas.getContext("2d");
@@ -189,20 +183,7 @@ function renderHeroStats() {
   `;
 }
 
-function updateSpotlight(track) {
-  if (!track) {
-    return;
-  }
 
-  spotlightArt.style.cssText = artStyle(track.palette);
-  spotlightTitle.textContent = track.title;
-  spotlightFile.textContent = track.output;
-  spotlightDescription.textContent =
-    track.duration > 0
-      ? `Faixa pronta para streaming local, com ${formatTime(track.duration)} de duracao.`
-      : "Faixa pronta para streaming local em formato otimizado.";
-  spotlight.dataset.id = track.id;
-}
 
 function updateCurrentUI() {
   const track = state.tracks[state.currentIndex];
@@ -219,7 +200,6 @@ function updateCurrentUI() {
   playButton.textContent = state.isPlaying ? "Pausar" : "Tocar";
   renderTrackGrid();
   renderQueue();
-  updateSpotlight(track);
 }
 
 function escapeHtml(value) {
@@ -468,13 +448,7 @@ function bindEvents() {
     playCurrent();
   });
 
-  playSpotlightButton.addEventListener("click", () => {
-    if (state.currentIndex >= 0) {
-      playCurrent();
-      return;
-    }
-    loadTrack(0, { autoplay: true });
-  });
+
 
   prevButton.addEventListener("click", () => {
     if (!state.tracks.length) {
@@ -607,7 +581,6 @@ async function loadCatalog() {
   renderHeroStats();
   applyFilter();
   renderQueue();
-  updateSpotlight(state.tracks[0]);
   restorePlayerState();
   prefetchDurations();
 }
@@ -649,7 +622,6 @@ function prefetchDurations() {
 function renderFatalError(message) {
   trackGrid.innerHTML = `<p class="hero-text">${escapeHtml(message)}</p>`;
   queueList.innerHTML = "";
-  spotlightDescription.textContent = message;
 }
 
 paintIdleVisualizer();
