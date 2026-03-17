@@ -45,7 +45,7 @@ let audioGraphReady = false;
 
 const appConfig = window.MUSICLAB_CONFIG || {};
 const audioBaseUrl = String(appConfig.audioBaseUrl || "web-audio").replace(/\/$/, "");
-const visualizerEnabled = false;
+const visualizerEnabled = true;
 
 console.log("[MusicLab] Config carregada:", { audioBaseUrl, hasConfig: !!window.MUSICLAB_CONFIG });
 

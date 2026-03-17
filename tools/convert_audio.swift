@@ -57,34 +57,27 @@ func preferredFile(_ lhs: URL, _ rhs: URL) -> URL {
 }
 
 func exportTrack(inputURL: URL, outputURL: URL) throws {
-    let asset = AVURLAsset(url: inputURL)
-    guard let exportSession = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetAppleM4A) else {
-        throw NSError(domain: "convert_audio", code: 10, userInfo: [
-            NSLocalizedDescriptionKey: "Nao foi possivel criar export session para \(inputURL.lastPathComponent)"
-        ])
-    }
+    let process = Process()
+    process.executableURL = URL(fileURLWithPath: "/usr/bin/afconvert")
+    process.arguments = [
+        "-d", "aac",
+        "-f", "m4af",
+        inputURL.path,
+        outputURL.path
+    ]
 
-    exportSession.outputURL = outputURL
-    exportSession.outputFileType = .m4a
-    exportSession.shouldOptimizeForNetworkUse = true
-
-    let semaphore = DispatchSemaphore(value: 0)
-    var exportError: Error?
-
-    exportSession.exportAsynchronously {
-        exportError = exportSession.error
-        semaphore.signal()
-    }
-
-    semaphore.wait()
-
-    if let exportError {
-        throw exportError
-    }
-
-    if exportSession.status != .completed {
-        throw NSError(domain: "convert_audio", code: 11, userInfo: [
-            NSLocalizedDescriptionKey: "Exportacao incompleta para \(inputURL.lastPathComponent): \(exportSession.status.rawValue)"
+    do {
+        try process.run()
+        process.waitUntilExit()
+        
+        if process.terminationStatus != 0 {
+            throw NSError(domain: "convert_audio", code: Int(process.terminationStatus), userInfo: [
+                NSLocalizedDescriptionKey: "afconvert falhou para \(inputURL.lastPathComponent) com status \(process.terminationStatus)"
+            ])
+        }
+    } catch {
+        throw NSError(domain: "convert_audio", code: 12, userInfo: [
+            NSLocalizedDescriptionKey: "Erro ao executar afconvert: \(error.localizedDescription)"
         ])
     }
 }
