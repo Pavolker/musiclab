@@ -238,7 +238,14 @@ function loadTrack(index, { autoplay = false, preserveTime = false } = {}) {
 
   state.currentIndex = index;
   console.log("[MusicLab] Carregando track:", { title: track.title, src: track.src });
-  audio.src = track.src;
+  
+  // Limpar src anterior e usar source element para forçar tipo MIME correto
+  audio.removeAttribute('src');
+  audio.innerHTML = '';
+  const source = document.createElement('source');
+  source.src = track.src;
+  source.type = 'audio/mp4';
+  audio.appendChild(source);
   audio.load();
   seekRange.value = 0;
   timeCurrent.textContent = "00:00";
