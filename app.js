@@ -268,8 +268,21 @@ async function playCurrent() {
     loadTrack(0);
   }
 
+  console.log("[MusicLab] Tentando tocar:", {
+    volume: audio.volume,
+    muted: audio.muted,
+    paused: audio.paused,
+    currentSrc: audio.currentSrc,
+    readyState: audio.readyState
+  });
+
   try {
     await audio.play();
+    console.log("[MusicLab] Audio tocando:", {
+      volume: audio.volume,
+      muted: audio.muted,
+      currentTime: audio.currentTime
+    });
     if (visualizerEnabled) {
       await ensureAudioGraph();
     }
@@ -466,6 +479,12 @@ function bindEvents() {
   });
 
   audio.addEventListener("loadedmetadata", () => {
+    console.log("[MusicLab] Metadata carregada:", {
+      duration: audio.duration,
+      readyState: audio.readyState,
+      volume: audio.volume,
+      muted: audio.muted
+    });
     const track = state.tracks[state.currentIndex];
     if (!track) {
       return;
